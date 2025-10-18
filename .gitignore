@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Node/npm
+node_modules/
+package-lock.json
+
+# Data (keep code, exclude large exports)
+data/novel_export/
+content/drafts/
+
+# Keep these
+!.gitkeep
