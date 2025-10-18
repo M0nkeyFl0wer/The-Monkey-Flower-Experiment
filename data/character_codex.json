@@ -1,0 +1,393 @@
+{
+  "characters": {
+    "Sarah": {
+      "name": "Sarah",
+      "age": null,
+      "tags": [
+        "Faculty",
+        "orgsnizer",
+        "ethicist"
+      ],
+      "background": "** Formerly worked in conflict resolution for an NGO. Now teaches philosophy and ethics. Believes education is a form of care. Deeply respected across ideological lines.\n\n**Connections:** Frank (peer), Tria (trusted source), Melanie (close confidante)\n\n**Summary:** Sarah teaches ethics and becomes a critical moral voice as the university community is forced to choose between safety and solidarity. She\u2019s both a mediator and a mirror.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Melanie": {
+      "name": "Melanie",
+      "age": null,
+      "tags": [
+        "Faculty",
+        "organizer",
+        "board member"
+      ],
+      "background": "** Grew up in the foster system. Studies social ecology. Known for organizing the shared pantry, communal kitchen, and sleeping rolls for the gym refugees on the first night of the blackout.\n\n**Connections:** Randy (relies on him for tech), Tria (co-organizers), Chris (growing bond)\n\n**Summary:** Melanie coordinates logistics for food and shelter in the early days of isolation, and later becomes a pillar of mutual aid efforts. Her kindness is her strength\u2014and she\u2019s tougher than most people realize.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Amir": {
+      "name": "Amir",
+      "age": null,
+      "tags": [
+        "Student",
+        "Math"
+      ],
+      "background": "** Autistic and mobility-impaired, Amir has a unique way of seeing problems. He\u2019s been quietly compiling resource data and social graphs from public network pings. Once rejected by the board, now increasingly respected.\n\n**Connections:** Frank (math mentor), Tria (data source), Kamea (admirer of his models)\n\n**Summary:** Amir doesn\u2019t talk much and rarely shows up in group photos. But if you want to know who has power\u2014or how long the water might last\u2014ask Amir. He probably already built the dashboard.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "President Bill": {
+      "name": "President Bill",
+      "age": null,
+      "tags": [
+        "Antagonist",
+        "board member",
+        "conservative",
+        "principled"
+      ],
+      "background": "** Former public university dean who came to the mountain for prestige and stability. Doesn\u2019t understand why the students won\u2019t just listen. Fears losing control of the narrative.\n\n**Connections:** Karen (ally), Frank (rival), Kamea (threat), Rueben (enforcer)\n\n**Summary:** President Bill is a pragmatic administrator trying to manage a crisis. He believes order must come before ideals and fears student-led chaos. He might mean well\u2014but he's on the wrong side of the line.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Tria": {
+      "name": "Tria",
+      "age": null,
+      "tags": [
+        "Student",
+        "journalist",
+        "activist",
+        "Protagonist"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83c\udf32 Quiet Help in the Woods \ud83c\udf32": {
+      "name": "\ud83c\udf32 Quiet Help in the Woods \ud83c\udf32",
+      "age": null,
+      "tags": [],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83d\udea8 Emergency Meeting: Student & Faculty Union Storm the Board \ud83d\udea8": {
+      "name": "\ud83d\udea8 Emergency Meeting: Student & Faculty Union Storm the Board \ud83d\udea8",
+      "age": null,
+      "tags": [],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83d\udd34 Live Update from the Library": {
+      "name": "\ud83d\udd34 Live Update from the Library",
+      "age": null,
+      "tags": [],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Eli": {
+      "name": "Eli",
+      "age": null,
+      "tags": [
+        "Grid technician",
+        "student",
+        "staff"
+      ],
+      "background": "** First-year engineering intern placed up at the radio tower. Got stuck when the storm hit. Communicates via glitchy uplink nodes and solar repeater drones. Documents everything.\n\n**Connections:** Randy (tech idol), Sarah (debrief contact), Tria (increasingly obsessed with reaching her)\n\n**Summary:** Eli is alone and just barely online, but his logs are slowly becoming critical to understanding the scope of the disaster. Nobody remembers approving his placement\u2014and now he's the eyes in the sky.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Randy": {
+      "name": "Randy",
+      "age": null,
+      "tags": [
+        "Student",
+        "activist",
+        "tech specialist",
+        "students union"
+      ],
+      "background": "** Worked on mutual aid infrastructure in several cities before enrolling in the distributed systems pilot. Lost someone close, and rarely talks about it. Known for his algae-dyed hair and the patched mesh routers he built into the trees.\n\n**Connections:** Melanie (tech support partner), Tria (trusts her with secrets), Chris (shared projects)\n\n**Summary:** Randy is a brilliant and introverted systems thinker who built much of the mesh network now keeping people connected. His loyalty is to the work and the people\u2014not to any leader.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Tria's Blog Post on the University Bulletin": {
+      "name": "Tria's Blog Post on the University Bulletin",
+      "age": null,
+      "tags": [],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Tom": {
+      "name": "Tom",
+      "age": null,
+      "tags": [
+        "Staff",
+        "good person"
+      ],
+      "background": "** Former firefighter. Lives in a university-owned cabin near the hydro station and reports to no one. Knows every path, tree, and generator on the mountain.\n\n**Connections:** Randy (respects his work), Tria (has fixed her drone more than once), Sarah (shares tea occasionally)\n\n**Summary:** Tom is an older groundskeeper who knows the terrain of the mountain better than anyone. He becomes essential to survival after the storm. Quiet, steady, and underestimated.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83c\udf27\ufe0f Thoughts During the Storm": {
+      "name": "\ud83c\udf27\ufe0f Thoughts During the Storm",
+      "age": null,
+      "tags": [],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83c\udff4": {
+      "name": "\ud83c\udff4",
+      "age": null,
+      "tags": [
+        "Flag emoji depicting the monkey flower experiment symbol"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Kamea": {
+      "name": "Kamea",
+      "age": null,
+      "tags": [
+        "Student",
+        "Protagonist",
+        "students union",
+        "activist"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83e\udd54\ud83c\udf7d\ufe0f": {
+      "name": "\ud83e\udd54\ud83c\udf7d\ufe0f",
+      "age": null,
+      "tags": [
+        "Image showing Meredith distributing food"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "\ud83d\udcf8": {
+      "name": "\ud83d\udcf8",
+      "age": null,
+      "tags": [
+        "Image of Board of Directors looking out the window"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Jasper": {
+      "name": "Jasper",
+      "age": null,
+      "tags": [
+        "Staff",
+        "3d printing"
+      ],
+      "background": "** Originally a sculptor, Jasper was brought in on a short contract to oversee architectural printing experiments. Ended up becoming the de facto coordinator of emergency shelter construction.\n\n**Connections:** Tom (work partner), Melanie (constant requests), Frank (argues about material use)\n\n**Summary:** Jasper works all night and hates meetings. They\u2019ve been repurposing furniture, printer blocks, and even old campus signage into shelters. A true artist of survival.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Karen": {
+      "name": "Karen",
+      "age": null,
+      "tags": [
+        "Board member",
+        "home owner",
+        "community member"
+      ],
+      "background": "** Real estate developer who invested early in the Ridge homes. On the Board of Directors. Her nephew is a student, but she rarely talks about it. Chairs the Facilities Subcommittee.\n\n**Connections:** President Bill (ally), Frank (frenemies), Rueben (secretly funds security)\n\n**Summary:** Karen is a landowner and member of the Board. She opposes letting in more refugees and represents upper-class isolationist views. To her, the mountain is a personal retreat\u2014not a community.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Chris": {
+      "name": "Chris",
+      "age": null,
+      "tags": [
+        "Staff"
+      ],
+      "background": "** Former military family, joined the university to study law enforcement tech but began questioning authority after a personal incident. Known for keeping routines and sticking to the rules\u2014until the rules started hurting people.\n\n**Connections:** Rueben (former mentor), Kamea (disagreed in debates), Melanie (grew close after defection)\n\n**Summary:** Chris starts out assisting university security but defects after seeing the mistreatment of refugees. A complex, morally grey character, caught between instinct and awakening.",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    },
+    "Frank": {
+      "name": "Frank",
+      "age": null,
+      "tags": [
+        "Faculty",
+        "board member",
+        "math professor"
+      ],
+      "background": "",
+      "motivations": "",
+      "connections": [],
+      "voice_notes": "",
+      "aesthetic_lean": "balanced",
+      "sample_dialogue": [],
+      "personality_traits": [],
+      "knowledge_scope": null,
+      "emotional_state": "",
+      "social_position": ""
+    }
+  },
+  "story_events": [
+    {
+      "date": "2025-06-03",
+      "time": "15:30",
+      "event": "Storm approaching, community divided on refugee protection",
+      "key_characters": [
+        "Chris",
+        "Sarah",
+        "Tria",
+        "Kamea",
+        "Randy"
+      ],
+      "significance": "Major conflict point"
+    }
+  ],
+  "generated_at": "2025-10-18T19:35:04.310046",
+  "total_characters": 21
+}

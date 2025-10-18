@@ -1,0 +1,516 @@
+================================================================================
+CAMPUS LAN STORYTELLING - INFRASTRUCTURE DIAGRAM
+================================================================================
+
+The Anti-Bureaucratic Swarm Architecture Explained Visually
+
+================================================================================
+COMPARISON: BUREAUCRATIC vs. ANTI-BUREAUCRATIC
+================================================================================
+
+BUREAUCRATIC SYSTEM (Traditional Multi-Agent):
+───────────────────────────────────────────────
+
+    Agent A                 Agent B                 Agent C
+      │                       │                       │
+      ├─────────────────────────┼─────────────────────┤
+      │                         │                     │
+      └──────────┬──────────────┴─────────┬───────────┘
+                 │                       │
+            (Message Routing)      (Request/Response)
+                 │                       │
+                 └───────────┬───────────┘
+                             │
+                    ┌────────▼─────────┐
+                    │ Central          │
+                    │ Coordinator      │
+                    │ (Bottleneck)     │
+                    └────────┬─────────┘
+                             │
+                    (all decisions flow through)
+                             │
+              ┌──────────────┴──────────────┐
+              │                             │
+        ┌─────▼────┐              ┌────────▼──┐
+        │ Approval │              │ Resource  │
+        │ Layer 1  │              │ Allocator │
+        └─────┬────┘              └────────┬──┘
+              │                            │
+        ┌─────▼────┐              ┌────────▼──┐
+        │ Approval │              │ Queue     │
+        │ Layer 2  │              │ Manager   │
+        └─────┬────┘              └────────┬──┘
+              │                            │
+        ┌─────▼────┐              ┌────────▼──┐
+        │ Back to  │              │ Load      │
+        │ Agent    │              │ Balancer  │
+        └──────────┘              └───────────┘
+
+Problems:
+  ✗ Every decision requires central approval
+  ✗ Message routing is complex (queuing, buffering, retry logic)
+  ✗ Central coordinator is single point of failure
+  ✗ Latency compounds with swarm size
+  ✗ Each approval layer adds delay
+  ✗ Difficult to debug (where did the message go?)
+
+
+ANTI-BUREAUCRATIC SYSTEM (Our Implementation):
+───────────────────────────────────────────────
+
+                    ┌─────────────────────────┐
+                    │  Stigmergic Bulletin    │
+                    │  Board (Traces)         │
+                    │                         │
+                    │  - Character post about │
+                    │    refugee crisis       │
+                    │  - Topic: refugee       │
+                    │  - Emotional state: ⚠️  │
+                    │  - Decay factor: 0.8    │
+                    └─────────────────────────┘
+                             △  │  △
+                             │  │  │
+            ┌────────────────┘  │  └────────────────┐
+            │                   │                   │
+            │                   │                   │
+    ┌───────▼────┐      ┌───────▼────┐      ┌───────▼────┐
+    │   Chris    │      │   Sarah    │      │    Tria    │
+    │  (Agent)   │      │  (Agent)   │      │  (Agent)   │
+    │            │      │            │      │            │
+    │ Local      │      │ Local      │      │ Local      │
+    │ Memory ✓   │      │ Memory ✓   │      │ Memory ✓   │
+    │ Auto       │      │ Auto       │      │ Auto       │
+    │ Decision ✓ │      │ Decision ✓ │      │ Decision ✓ │
+    │ Rate Limit │      │ Rate Limit │      │ Rate Limit │
+    │ (self) ✓   │      │ (self) ✓   │      │ (self) ✓   │
+    │            │      │            │      │            │
+    │ When       │      │ When       │      │ When       │
+    │ Chris      │      │ Sarah      │      │ Tria       │
+    │ wants to   │      │ wants to   │      │ wants to   │
+    │ act:       │      │ act:       │      │ act:       │
+    │            │      │            │      │            │
+    │ 1. Check   │      │ 1. Check   │      │ 1. Check   │
+    │    local   │      │    local   │      │    local   │
+    │    rules   │      │    rules   │      │    rules   │
+    │ 2. Act!    │      │ 2. Act!    │      │ 2. Act!    │
+    │ 3. Leave   │      │ 3. Leave   │      │ 3. Leave   │
+    │    trace   │      │    trace   │      │    trace   │
+    │            │      │            │      │            │
+    └────────────┘      └────────────┘      └────────────┘
+         │                   │                     │
+         └───────────────────┴─────────────────────┘
+                         │
+                  (all traces visible)
+                         │
+         ┌───────────────┴────────────────┐
+         │                                │
+    ┌────▼────┐              ┌───────────▼────┐
+    │ Human   │              │ Spiral of      │
+    │ Reviews │              │ Emergent       │
+    │ (ONLY   │              │ Interactions   │
+    │ final   │              │ (no central    │
+    │ gate)   │              │ control)       │
+    └─────────┘              └────────────────┘
+
+Benefits:
+  ✓ Every agent decides autonomously
+  ✓ No message routing needed (traces are write-once)
+  ✓ No single point of failure (agent fails, others continue)
+  ✓ Latency constant regardless of swarm size
+  ✓ Zero approval layers for agents (humans only review final)
+  ✓ Easy to debug (read the bulletin board, see what everyone did)
+  ✓ Emergent behavior possible (interactions not pre-programmed)
+
+================================================================================
+STIGMERGIC COORDINATION: HOW IT WORKS
+================================================================================
+
+The Bulletin Board Pattern (Environmental Coordination):
+
+    Character A                          Character B
+    (Chris)                              (Sarah)
+       │                                    │
+       │ 1. Observes world                │ 1. Observes world
+       │                                    │
+       │ 2. Reads bulletin board          │ 2. Reads bulletin board
+       │    "Kamea posted about            │    "Chris decided to help
+       │     refugee ethics"               │     refugees"
+       │                                    │
+       │ 3. Makes autonomous               │ 3. Makes autonomous
+       │    decision (no asking!)          │    decision (no asking!)
+       │                                    │
+       │ 4. Leaves trace on board          │ 4. Leaves trace on board
+       │    "Chris decided to help"        │    "Sarah agrees with
+       └─────────┬──────────────────────────┘     refugee aid"
+                 │
+                 ▼
+         ┌──────────────────────────────┐
+         │  Bulletin Board (Traces)     │
+         │  ──────────────────────────  │
+         │  • Kamea: ethical concerns   │
+         │  • Chris: helping refugees   │
+         │  • Sarah: agrees with Chris  │
+         │  • Randy: action on way      │
+         │  • Tria: investigating       │
+         │                              │
+         │  All posts visible to all    │
+         │  No routing needed           │
+         │  No "is Bob listening?" Q    │
+         │  No acknowledgments required │
+         └──────────────────────────────┘
+
+Key insight:
+  Information flows THROUGH the environment
+  NOT between agents
+  Agents read what they want, WHEN they want
+  No coordination overhead
+
+================================================================================
+LOCAL DECISION-MAKING: HOW IT WORKS
+================================================================================
+
+Each Character Decides Autonomously:
+
+┌─────────────────────────────────────────────────────┐
+│ Chris (Character Agent)                            │
+│                                                     │
+│ Can I generate a post about refugees?              │
+│                                                     │
+│ Local Check 1: Do I have relevant knowledge?       │
+│   → Chris knows about security                     │
+│   → Chris knows the president's policy             │
+│   → YES ✓                                          │
+│                                                     │
+│ Local Check 2: Would my character care?            │
+│   → Chris's motivation: "protect vulnerable"       │
+│   → Refugees are vulnerable                        │
+│   → YES ✓                                          │
+│                                                     │
+│ Local Check 3: Have I posted on this today?        │
+│   → Posts today: 0                                 │
+│   → Daily limit: 10                                │
+│   → YES ✓ (can generate)                           │
+│                                                     │
+│ Local Check 4: Is my queue empty enough?           │
+│   → Current queue: 1 task                          │
+│   → Max queue: 5                                   │
+│   → YES ✓ (can accept task)                        │
+│                                                     │
+│ Local Check 5: Quality threshold met?              │
+│   → Will quality be > 70?                          │
+│   → (quick heuristic, not full generation)         │
+│   → YES ✓ (probably good enough)                   │
+│                                                     │
+│ ──────────────────────────────────────────         │
+│ DECISION: Generate post                            │
+│ NO external approval needed                        │
+│ No coordinator asked                               │
+│ Chris decides autonomously                         │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+
+Why this scales:
+  • Adding 50 characters = 50 independent decision-makers
+  • No central system to bottleneck
+  • Each character decides for itself
+  • Decisions happen in parallel
+  • Zero inter-agent coordination needed
+
+================================================================================
+AUTONOMOUS RATE LIMITING: HOW IT WORKS
+================================================================================
+
+Agents Police Themselves (No External Throttling):
+
+    Chris (Agent)
+    ─────────────
+
+    Posts today: 9
+    Daily limit: 10
+    Queue size: 5/5 (FULL)
+
+    Can I accept another task?
+      → Posts today: 9 < 10 ✓
+      → Queue: 5 = 5 ✗ (FULL)
+      → DECISION: Cannot accept
+
+    Doesn't ask permission
+    Doesn't wait for coordinator
+    Checks local rules, acts accordingly
+
+    System benefits:
+      ✓ No central rate limiter needed
+      ✓ Each agent self-regulates
+      ✓ Work naturally spreads to available agents
+      ✓ Work-stealing kicks in automatically
+
+
+    When Chris's queue gets picked up by idle agent:
+
+    Randy (Idle Agent)
+    ──────────────────
+
+    Current queue: 0/5
+    Daily posts: 2/10
+
+    Randy observes: Chris queue > 5
+    Randy (autonomously): I can steal some work
+    Randy steals 2 tasks from Chris
+
+    Chris: 5 → 3 tasks
+    Randy: 0 → 2 tasks
+
+    No central scheduler made this decision
+    Complete peer-to-peer load balancing
+
+================================================================================
+KNOWLEDGE SHARING: HOW IT WORKS
+================================================================================
+
+Without Explicit Reporting:
+
+Timeline:
+─────────
+
+T1: Tria generates investigative post
+    "Budget discrepancies found in refugee housing"
+
+    Tria leaves trace on bulletin board:
+    ├─ character: Tria
+    ├─ type: character_posted
+    ├─ topic: refugee_budget
+    ├─ confidence: HIGH
+    └─ decay_factor: 1.0
+
+T2: (5 minutes later) Chris checks bulletin board
+    Chris: "What's been happening?"
+    Reads traces:
+    ├─ Kamea posted ethical essay
+    ├─ Tria posted budget analysis
+    └─ Randy left trace "on the way to help"
+
+    Chris LEARNS:
+    ├─ What others care about (implicit)
+    ├─ What they've learned (implicit)
+    ├─ What actions they're taking (implicit)
+
+    NO explicit "hey Chris, listen up" needed
+    Chris just reads the board
+
+T3: Chris makes decision based on implicit knowledge
+    Chris: "Tria found budget issues, Randy is helping,
+            Sarah cares about ethics. I should help too."
+
+    Chris posts response post
+
+T4: Sarah reads bulletin board
+    Sarah: "I see Chris joined in, Tria has evidence,
+            Randy is organizing. I should contribute my
+            ethical analysis."
+
+    Sarah posts ethical framework
+
+Result: Organic interaction pattern emerges
+        No central direction
+        No explicit hand-offs
+        Just agents reading the board and acting
+
+================================================================================
+ASYNCHRONOUS EXECUTION: HOW IT WORKS
+================================================================================
+
+No Bottleneck From Slow Agents:
+
+        Generation Phase
+        ────────────────
+
+Start: T=0ms
+
+Chris starts generating post → takes 200ms
+Sarah starts generating post → takes 150ms
+Tria starts generating post → takes 300ms (slow!)
+Kamea starts generating post → takes 100ms
+
+T=0ms:    All agents start
+T=100ms:  Kamea finishes → post saved immediately
+T=150ms:  Sarah finishes → post saved immediately
+T=200ms:  Chris finishes → post saved immediately
+T=300ms:  Tria finishes → post saved
+
+Total time: 300ms (just the slowest)
+
+Compare to synchronous:
+  T=0ms:    All agents start
+  T=100ms:  Kamea done, waits for others
+  T=150ms:  Sarah done, waits for others
+  T=200ms:  Chris done, waits for others
+  T=300ms:  Tria done, everyone can proceed
+
+  Total time: Still 300ms, but with 150+150+100 = 400ms of WAITING
+
+With 50 agents:
+  Async: 300ms (one pass through)
+  Sync:  Could be 5000ms+ (lots of waiting)
+
+Why async helps:
+  ✓ Results posted as they finish
+  ✓ Bulletin board updates in real-time
+  ✓ Downstream agents can act on early results
+  ✓ No idle time waiting for slow peers
+
+================================================================================
+DATA FLOW: AGENT → BULLETIN → HUMAN
+================================================================================
+
+The Complete Pipeline:
+
+┌──────────────────────────────────────────────────────┐
+│                  Generation Phase                     │
+│                                                      │
+│  Character Agent (Chris)                            │
+│  ↓                                                   │
+│  Checks local constraints                           │
+│  ↓                                                   │
+│  Reads bulletin board                               │
+│  ↓                                                   │
+│  Generates post (using Claude)                      │
+│  ↓                                                   │
+│  Checks local quality                               │
+│  ↓                                                   │
+│  Post ready                                         │
+│  ↓                                                   │
+│  Save to memory                                     │
+│  ↓                                                   │
+│  Leave trace on bulletin board                      │
+│  ↓                                                   │
+└────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│                  Coordination Phase                   │
+│                                                      │
+│  Bulletin Board                                     │
+│  ├─ Chris: "I'm helping refugees"                  │
+│  ├─ Sarah: "Ethical framework needed"              │
+│  ├─ Tria: "Budget investigation underway"          │
+│  └─ Kamea: "Ideological resistance..."             │
+│                                                      │
+│  (All agents read all traces)                       │
+│  (Each decides what to do next)                     │
+│  (No central coordinator)                           │
+│                                                      │
+└────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│                  Review Phase (Human Gate)            │
+│                                                      │
+│  GitHub Issues                                      │
+│  ├─ [Draft] Chris - "I'm helping refugees"         │
+│  ├─ [Draft] Sarah - "Ethical analysis"             │
+│  ├─ [Draft] Tria - "Budget exposé"                 │
+│  └─ [Draft] Kamea - "Ideological response"         │
+│                                                      │
+│  You review: One person, multiple posts             │
+│  You approve/reject: Human judgment                 │
+│  You provide feedback: AI learns                     │
+│                                                      │
+│  Only gate: Human approval                          │
+│  No AI-to-AI approval layers                        │
+│                                                      │
+└────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│                  Publication Phase                    │
+│                                                      │
+│  Approved posts → Archive                           │
+│  → Bluesky (manual copy by you)                     │
+│  → Lens Protocol (manual copy by you)               │
+│  → Magazine compilation                            │
+│                                                      │
+│  You control publication timing                     │
+│  No automated posting (for quality control)         │
+│                                                      │
+└────────────────────────────────────────────────────┘
+
+================================================================================
+FAILURE RESILIENCE: HOW IT WORKS
+================================================================================
+
+If One Agent Fails:
+
+System Status:
+  Chris: ✓ Running
+  Sarah: ✓ Running
+  Tria: ✗ CRASHED
+  Kamea: ✓ Running
+  Randy: ✓ Running
+
+What happens:
+  • Tria stops generating posts
+  • Tria stops reading bulletin board
+  • Tria stops leaving traces
+
+  But:
+  • Chris still generates
+  • Sarah still generates
+  • Kamea still generates
+  • Randy still generates
+
+  • All see each other's traces
+  • All coordinate through bulletin
+  • Tria's absence is VISIBLE but not catastrophic
+
+  System continues at 80% capacity
+
+If Central Coordinator Failed (in old system):
+  • Everything stops
+  • No decisions possible
+  • No coordination happens
+  • System down 100%
+
+This is why we built anti-bureaucratic:
+  No single point of failure
+  One agent down = 1/N capacity loss (not 100%)
+
+================================================================================
+SUMMARY
+================================================================================
+
+ANTI-BUREAUCRATIC SWARM INFRASTRUCTURE PRINCIPLES:
+
+1. STIGMERGIC COORDINATION
+   └─ Traces on bulletin board, not message routing
+
+2. LOCAL DECISION-MAKING
+   └─ Agents decide autonomously, no central approval
+
+3. AUTONOMOUS RATE LIMITING
+   └─ Agents police themselves, no external throttle
+
+4. STATE SEPARATION
+   └─ No shared state, no locks needed
+
+5. WORK-STEALING LOAD BALANCING
+   └─ Peer-to-peer redistribution, no central scheduler
+
+6. ASYNCHRONOUS EXECUTION
+   └─ No sync barriers, processes as they complete
+
+7. IMPLICIT KNOWLEDGE SHARING
+   └─ Learn from traces, not from explicit reports
+
+8. SINGLE HUMAN GATE
+   └─ Humans only review final output, not intermediate steps
+
+RESULT: Bureaucracy ↓, Autonomy ↑, Resilience ↑, Scalability ↑
+
+The swarm can handle 5 characters or 50 characters with same infrastructure.
+No bottlenecks created by scale.
+No bureaucratic overhead grows with agent count.
+
+This mirrors the novel's themes:
+  Agents have freedom within constraints
+  Community organizes without central authority
+  Emergent patterns arise from local interactions
+  System resilient to institutional failure
+
+================================================================================

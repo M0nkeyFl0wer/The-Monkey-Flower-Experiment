@@ -1,0 +1,41 @@
+{
+  "character": "Chris",
+  "generated_at": "2025-10-18T19:37:05.749658",
+  "posts": [
+    {
+      "character_name": "Chris",
+      "content": "Stood outside the board room for two hours tonight. Security detail.\n\nHeard Kamea lay out the numbers\u2014families, kids, medical needs. Concrete stuff. Then Robert from treasury: \"We need to consider institutional liability.\" Like we're talking about a fucking insurance claim.\n\nI've been on this campus three years. Followed every protocol. Tonight I'm standing there in uniform while they debate \"proper channels\" and I can see the south field tents from the window. Counted them during the meeting. Eleven families. Been there since Tuesday.\n\nCommittee formed. Meeting adjourned 19:32.\n\nI'm still wearing this badge but I don't know what it means anymore when the people who make the rules can hear someone say \"our neighbors are sleeping in the rain\" and respond with \"let's form a committee.\"\n\nRueben taught me the job was about protecting people.\n\nNobody got protected tonight.\n```",
+      "timestamp": "2025-10-18 19:35",
+      "location": "security",
+      "encryption": "partial",
+      "post_type": "social",
+      "score": 0.0,
+      "approved": false,
+      "metadata": {
+        "scenario": "\nSCENE: Emergency Board Meeting - Resistance Against Bureaucracy\n\nKamea interrupts the mundane board meeting demanding immediate action for refugee support.\nThe board discusses \"proper channels\" and \"institutional liability\" while families\nsleep in the rain outside. Robert (treasurer) argues resources vs. morality.\nKamea's rebuttal: \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nA committee is formed. Decisive action is deferred.\n\nYou were there. What did you witness? What was your role? What do you think happened?\nWhat will you tell people on the network?\n\n\nYou were assigned to security during the meeting. You heard everything. How does this conflict with your sense of duty?\n\n\n\nRemember: Report what you personally experienced. Name specific people, moments, decisions.\nThis post is part of the permanent record of what happened."
+      },
+      "images": null
+    },
+    {
+      "character_name": "Chris",
+      "content": "I stood by the northwest door of the admin building tonight for three hours while the Emergency Board Meeting happened. That's my job\u2014stand there, look official, make sure nobody unauthorized gets in.\n\nNobody told me I'd be guarding a room where people argued about whether human beings deserve shelter.\n\nKamea showed up at 19:15, no appointment, walked right past me. I should've stopped her. Didn't. She went straight to the center of that polished table and said families are sleeping in the rain and we need to act *tonight*. Not tomorrow. Not after proper channels. Tonight.\n\nRobert\u2014treasurer, always treasurer\u2014pulled out his tablet. Started running numbers. \"Institutional liability,\" he said. \"Resource allocation.\" Like those words mean anything when there are kids outside getting soaked.\n\nI watched through the door gap. Kamea didn't yell. She just said: \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nThe room went quiet.\n\nThen someone mentioned committees. Formation of. Deferral pending review.\n\nI've spent two years in campus security following every protocol. Show up on time, file reports correctly, enforce the rules because rules keep things running. That's what Rueben taught me. Structure protects people.\n\nBut I stood there tonight hearing \"proper channels\" while I could literally see the south field from the window\u2014tarps, makeshift shelters, people huddled under trees.\n\nThe meeting ended at 22:20. Committee formed. Action deferred.\n\nI walked my patrol route after. Checked the south field perimeter at 22:35. Counted nineteen people, including at least four children under ten. One family's tarp had collapsed. They were trying to fix it in the dark.\n\nI'm supposed to report unauthorized camping on university property.\n\nI didn't write the report.\n\nI don't know what that makes me. But I know what it would make me if I had.",
+      "timestamp": "2025-10-18 19:35",
+      "location": "staff_lounge",
+      "encryption": "partial",
+      "post_type": "blog",
+      "score": 0.0,
+      "approved": false,
+      "metadata": {
+        "scenario": "\nSCENE: Emergency Board Meeting - Resistance Against Bureaucracy\n\nKamea interrupts the mundane board meeting demanding immediate action for refugee support.\nThe board discusses \"proper channels\" and \"institutional liability\" while families\nsleep in the rain outside. Robert (treasurer) argues resources vs. morality.\nKamea's rebuttal: \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nA committee is formed. Decisive action is deferred.\n\nYou were there. What did you witness? What was your role? What do you think happened?\nWhat will you tell people on the network?\n\n\nYou were assigned to security during the meeting. You heard everything. How does this conflict with your sense of duty?\n\n\n\nRemember: Report what you personally experienced. Name specific people, moments, decisions.\nThis post is part of the permanent record of what happened."
+      },
+      "images": [
+        {
+          "description": "View from admin building northwest window, 22:20\u2014south field visible in distance, scattered lights from phones and small fires",
+          "type": "auto",
+          "prompt": "Scene from Akima University: View from admin building northwest window, 22:20\u2014south field visible in distance, scattered lights from phones and small fires"
+        }
+      ]
+    }
+  ],
+  "total_posts": 2
+}

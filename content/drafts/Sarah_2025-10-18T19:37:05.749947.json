@@ -1,0 +1,41 @@
+{
+  "character": "Sarah",
+  "generated_at": "2025-10-18T19:37:05.749989",
+  "posts": [
+    {
+      "character_name": "Sarah",
+      "content": "Watched Kamea interrupt budget line items with actual humans sleeping outside. \nRobert counted dollars while water soaked through emergency blankets.\n\nThe phrase \"proper channels\" was used eleven times. I counted.\n\nCommittee formed to \"study the issue.\" Kamea's face when they said that\u2014\nI teach ethics. I know the difference between deliberation and delay.\n\nSomeone asked about liability. Not one person asked the families their names.\n\nMeeting adjourned. Rain continued.\n\nI'm sitting in my dry office wondering what philosophy is worth if I can't name \nthis for what it is: choosing paperwork over people.\n\nKamea was right. This wasn't statistics.\n\n\u2014S\n\n[attachment: meeting_notes_redacted.txt]\n```",
+      "timestamp": "2025-10-18 19:35",
+      "location": "faculty_commons",
+      "encryption": "public",
+      "post_type": "social",
+      "score": 0.0,
+      "approved": false,
+      "metadata": {
+        "scenario": "\nSCENE: Emergency Board Meeting - Resistance Against Bureaucracy\n\nKamea interrupts the mundane board meeting demanding immediate action for refugee support.\nThe board discusses \"proper channels\" and \"institutional liability\" while families\nsleep in the rain outside. Robert (treasurer) argues resources vs. morality.\nKamea's rebuttal: \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nA committee is formed. Decisive action is deferred.\n\nYou were there. What did you witness? What was your role? What do you think happened?\nWhat will you tell people on the network?\n\n\nYou sat in that meeting trying to find the ethical middle ground. What questions do you have? What's your analysis?\n\n\n\nRemember: Report what you personally experienced. Name specific people, moments, decisions.\nThis post is part of the permanent record of what happened."
+      },
+      "images": null
+    },
+    {
+      "character_name": "Sarah",
+      "content": "I sat through tonight's emergency board meeting and I need to document what happened before I lose the clarity of my anger.\n\nKamea Reeves walked in at 19:34\u2014I checked my watch because the interruption was so jarring against Robert Chen's droning budget report. She didn't apologize for the disruption. She stood at the threshold between the polished conference room and the hallway that still smells like rain, and she said: \"There are seventeen families sleeping in tents on the south lawn. Three of them have children under five. The storm forecast says another front hits tomorrow night.\"\n\nRobert\u2014and I've known Robert for six years, he's not a cruel man\u2014Robert said, \"We have protocols for emergency housing requests.\"\n\nKamea's response: \"The protocol takes four business days. They've been here three hours.\"\n\nWhat followed was forty-three minutes of institutional language doing what institutional language does best: deferring human needs into procedural questions. \"Liability frameworks.\" \"Resource allocation matrices.\" \"Precedent concerns.\" I watched Frank try to bridge-build, suggesting we could expedite the committee formation process. I tried too\u2014proposed we could at least provide temporary shelter while the paperwork processes.\n\nBut here's what I can't stop thinking about: Robert said, \"We have to weigh institutional resources against individual needs.\" As if those are naturally opposing forces. As if caring for people depletes rather than enriches community capacity.\n\nKamea said, \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nThe meeting ended with a committee. A committee that will convene Thursday to discuss guidelines for future emergency responses.\n\nThursday is three days away.\n\nThe families are still outside.\n\nI teach ethics. I specialize in moral philosophy and conflict resolution. I can explain seven different frameworks for approaching this dilemma. But tonight I keep coming back to the simplest question my students ever asked me: \"If you can help and you don't, what does that make you?\"\n\nI don't have a clean answer. I'm still looking for the middle ground between Kamea's moral clarity and Robert's institutional caution. But I know what I saw tonight: the gap between our values and our actions, measured in tent fabric and rain.\n\n\u2014Sarah",
+      "timestamp": "2025-10-18 19:36",
+      "location": "ethics_forum",
+      "encryption": "public",
+      "post_type": "blog",
+      "score": 0.0,
+      "approved": false,
+      "metadata": {
+        "scenario": "\nSCENE: Emergency Board Meeting - Resistance Against Bureaucracy\n\nKamea interrupts the mundane board meeting demanding immediate action for refugee support.\nThe board discusses \"proper channels\" and \"institutional liability\" while families\nsleep in the rain outside. Robert (treasurer) argues resources vs. morality.\nKamea's rebuttal: \"Humanity and sustainability go hand-in-hand. This isn't statistics\u2014it's our neighbors.\"\n\nA committee is formed. Decisive action is deferred.\n\nYou were there. What did you witness? What was your role? What do you think happened?\nWhat will you tell people on the network?\n\n\nYou sat in that meeting trying to find the ethical middle ground. What questions do you have? What's your analysis?\n\n\n\nRemember: Report what you personally experienced. Name specific people, moments, decisions.\nThis post is part of the permanent record of what happened."
+      },
+      "images": [
+        {
+          "description": "Photo through conference room window\u2014polished table in foreground, tents visible on dark lawn beyond",
+          "type": "auto",
+          "prompt": "Scene from Akima University: Photo through conference room window\u2014polished table in foreground, tents visible on dark lawn beyond"
+        }
+      ]
+    }
+  ],
+  "total_posts": 2
+}
