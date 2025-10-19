@@ -251,8 +251,9 @@ post_type: social
 
 ### Remote - Seshat Server
 ```
-ssh -p8888 m0nkey-fl0wer@seshat.noosworx.com
-Server: RTX 4090, Ollama models, Claude API capable
+Available for deployment with RTX 4090
+Ollama models available, Claude API capable
+(Connection details in private notes)
 ```
 
 ### Archives
